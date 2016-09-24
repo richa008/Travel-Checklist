@@ -1,0 +1,15 @@
+<form id="createListModal" name="createListModal" novalidate>
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Create Checklist</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+        <div class="form-group">
+            <label>Destination</label>
+            <input class="form-control input" required type="text" name="listName" placeholder="Chicago" ng-model="model.destination" />
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="createChecklist()" type="button" ng-disabled="createListModal.$invalid">Save</button>
+        <button class="btn btn-default" ng-click="closeModal()" type="button">Cancel</button>
+    </div>
+</form>

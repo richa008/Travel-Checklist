@@ -1,0 +1,68 @@
+.header {
+    background-color: #990000;
+    color: white;
+    border-bottom: solid 1px #204d74;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.page-head {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #efefef;
+}
+.create-btn {
+    color: white;
+    background-color: #990000;
+}
+.create-btn:hover {
+    color: #efefef;
+}
+.create-btn:focus {
+    color: white;
+}
+.checklist-name {
+    color: #990000;
+    font-size: 35px;
+    padding-bottom: 5px;
+    font-family: 'Impact', sans-serif;
+}
+.border-bottom {
+    border-bottom: 1px solid #efefef;
+}
+.border-left {
+    border-left: 1px solid #efefef;
+}
+.border-right {
+    border-right: 1px solid #efefef;
+}
+.items-list {
+    list-style-type: none;
+    padding-left: 11px;
+}
+.category-name {
+    color: #990000;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #990000;
+    font-family: 'Niconne', sans-serif;
+}
+.pad-l-10 {
+    padding-left: 10px;
+}
+.checklist-item {
+    padding-top: 5px;
+}
+.items-list label span {
+    font-weight: normal;
+}
+.action-button{
+    float:right;
+    background-color: white;
+}
+.ht-25{
+    height:20px;
+}
+.link-btn{
+    padding:0px;
+}

@@ -1,0 +1,13 @@
+<h5 class="category-name">
+    <span>{{ category.name }}</span>
+    <button ng-Click="openAddItemModal()" class="btn action-button" title="Add"><img class="ht-25" src="assets/images/Plus.png" /></button>
+</h5>
+<ul class="items-list">
+    <li ng-repeat="item in category.items" class="checklist-item border-bottom" show-button-on-hover>
+        <label>
+            <input type="checkbox" ng-model="item.done" ng-change="onChange(item)"/>
+            <span class="pad-l-10">{{ item.name }}</span>
+        </label>
+        <button ng-Click="deleteItem(item)" class="btn action-button link-btn ng-hide" title="Delete"><img class="ht-25" src="assets/images/Trash.png" /></button>
+    </li>
+</ul>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>Travel Checklist</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+
+    <!-- load styles -->
+    <link rel="stylesheet" href="lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Niconne">
+
+    <!-- load scripts -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/jquery-1.11.3.min.js"></script>
+    <script src="lib/ui-bootstrap-tpls-2.1.3.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/model.js"></script>
+    <script src="assets/js/basicItemsDataService.js"></script>
+    <script src="assets/js/controller.js"></script>
+    <script src="assets/js/directives.js"></script>
+    <script src="assets/js/localStorageService.js"></script>
+
+</head>
+
+<body ng-app="travelChecklistApp">
+
+    <header class="header">
+        <h3 class="container">Travel Checklist</h3>
+    </header>
+    <div class="container" ng-controller="travelChecklistController">
+        <section class="section col-lg-12 col-md-12 col-sm-12" id="travelChecklists">
+            <div class="page-head">
+                <button type="button" ng-click="openCreateListModal()" title="Create new checklist" class="btn create-btn">Create New Checklist</button>
+                <div class="checklist-name pull-right">{{ checklist.destination }}</div>
+            </div>
+        </section>
+        <section class="section col-lg-12 col-md-12 col-sm-12">
+            <div class="col-lg-4 border-left">
+                <div ng-repeat="category in checklist.basicCategories">
+                    <checklist-category category="category" col-no="1"></checklist-category>
+                </div>
+            </div>
+            <div class="col-lg-4 border-left">
+                <div ng-repeat="category in checklist.clothesCategories">
+                    <checklist-category category="category" col-no="2"></checklist-category>
+                </div>
+            </div>
+            <div class="col-lg-4 border-left border-right">
+                <div ng-repeat="category in checklist.otherCategories">
+                    <checklist-category category="category" col-no="3"></checklist-category>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
