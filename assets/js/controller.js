@@ -34,7 +34,7 @@ travelChecklistApp.controller("travelChecklistController", ["$scope", "$uibModal
 
         saveDestinationData($scope.$parent.checklist.destination);
         saveCategoriesData($scope.$parent.checklist.basicCategories, $scope.$parent.checklist.clothesCategories, $scope.$parent.checklist.otherCategories);
-        $uibModalStack.dismissAll();
+        $scope.closeModal();
     }
 
     function saveCategoriesData(basicCategories, clothesCategories, otherCategories) {
@@ -51,71 +51,5 @@ travelChecklistApp.controller("travelChecklistController", ["$scope", "$uibModal
         saveCategoriesData($scope.checklist.basicCategories, $scope.checklist.clothesCategories, $scope.checklist.otherCategories);
         event.stopPropagation();
     });
-
-    //    $scope.onChange = function () {
-    //        saveCategoriesData($scope.checklist.basicCategories, $scope.checklist.clothesCategories, $scope.checklist.otherCategories);
-    //    }
-
-    //    $scope.openAddItemModal = function (categoryId, colNo) {
-    //        $scope.model = {};
-    //        $scope.selectedCategoryInfo = {
-    //            "categoryId": categoryId,
-    //            "colNo": colNo
-    //        };
-    //        var modalInstance = $uibModal.open({
-    //            templateUrl: '/partials/addChecklistItemModal.html',
-    //            controller: 'travelChecklistController',
-    //            scope: $scope //Creates child scope
-    //        });
-    //    }
-    //
-    //    $scope.addItemToCategory = function () {
-    //        var category = findCategory($scope.selectedCategoryInfo.categoryId, $scope.selectedCategoryInfo.colNo);
-    //        category = methodService.addItemToCategory(category, $scope.model.itemName);
-    //        saveCategoriesData($scope.checklist.basicCategories, $scope.checklist.clothesCategories, $scope.checklist.otherCategories);
-    //
-    //        $scope.$parent.checklist.basicCategories = $scope.checklist.basicCategories;
-    //        $scope.$parent.checklist.clothesCategories = $scope.checklist.clothesCategories;
-    //        $scope.$parent.checklist.otherCategories = $scope.checklist.otherCategories;
-    //        
-    //        $scope.closeModal();
-    //    }
-
-    //    $scope.openDeleteItemModal = function (categoryId, colNo) {
-    //        $scope.model = {};
-    //        $scope.selectedCategoryInfo = {
-    //            "categoryId": categoryId,
-    //            "colNo": colNo
-    //        };
-    //        var modalInstance = $uibModal.open({
-    //            templateUrl: '/partials/deleteItemModal.html',
-    //            controller: 'travelChecklistController',
-    //            scope: $scope //Creates child scope
-    //        });
-    //    }
-    //
-    //    $scope.deleteItemFromCategory = function () {
-    //        var category = findCategory($scope.selectedCategoryInfo.categoryId, $scope.selectedCategoryInfo.colNo);
-    //        category = methodService.addItemToCategory(category, $scope.model.itemName);
-    //        saveCategoriesData($scope.checklist.basicCategories, $scope.checklist.clothesCategories, $scope.checklist.otherCategories);
-    //
-    //        $scope.$parent.checklist.basicCategories = $scope.checklist.basicCategories;
-    //        $scope.$parent.checklist.clothesCategories = $scope.checklist.clothesCategories;
-    //        $scope.$parent.checklist.otherCategories = $scope.checklist.otherCategories;
-    //        
-    //        $scope.closeModal();
-    //    }
-
-    function findCategory(id, colNo) {
-        if (colNo === 1) {
-            return $scope.checklist.basicCategories.find(x => x.id === id);
-        } else if (colNo == 2) {
-            return $scope.checklist.clothesCategories.find(x => x.id === id);
-        } else {
-            return $scope.checklist.otherCategories.find(x => x.id === id);
-        }
-
-    }
-
 
 }]);

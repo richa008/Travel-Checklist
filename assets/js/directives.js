@@ -26,12 +26,15 @@ travelChecklistApp.directive("checklistCategory", ["$uibModal", "$uibModalStack"
             scope.addItemToCategory = function () {
                 methodService.addItemToCategory(scope.category, scope.model.itemName);
                 scope.$emit("saveChecklist");
-                scope.closeModal();
+                $uibModalStack.dismissAll();
             }
-            
-            scope.deleteItem = function(item){
-                var items = scope.category.items;
-                
+
+            scope.deleteItem = function (item) {
+                var index = scope.category.items.indexOf(item);
+                if (index !== -1) {
+                    scope.category.items.splice(index, 1);
+                }
+                scope.$emit("saveChecklist");
             }
         }
     }
