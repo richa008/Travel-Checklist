@@ -8,16 +8,16 @@ Travel Checklist is an app with basic items you may need on your trip, divided i
 
 ###Installation
 
-1. Update node
+1. Update node<br>
 npm update -g npm
 
-2. Install grunt
+2. Install grunt<br>
 npm install grunt@~0.4 grunt-contrib-concat grunt-contrib-uglify --save-dev
 
-3. Run grunt
+3. Run grunt<br>
 grunt
 
-4. Run server 
+4. Run server<br> 
 http-server
 
 ###Web App<br>
