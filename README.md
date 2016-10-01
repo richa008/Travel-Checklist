@@ -21,10 +21,10 @@ grunt
 4. Run server 
 http-server
 
-Web App
+#Web App<br>
 https://travelchecklist-b736d.firebaseapp.com/
 
-Chrome App
+#Chrome App<br>
 https://chrome.google.com/webstore/detail/travel-checklist/dlaemeigopgiecmageknplocogeedkjh
 
 
