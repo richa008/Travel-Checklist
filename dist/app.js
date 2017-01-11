@@ -50,19 +50,19 @@ var travelChecklistApp = angular.module('travelChecklistApp', ['ui.bootstrap']);
         new Item(1, "Backpack", false),
         new Item(2, "Belt", false),
         new Item(3, "Sunglasses", false),
-        new Item(4, "Watchers", false)
+        new Item(4, "Watch", false)
     ]
 
     var personalHygiene = [
         new Item(3, "Body wash", false),
         new Item(2, "Conditioner", false),
-        new Item(9, "Deodorant", false),
         new Item(4, "Face wash", false),
         new Item(8, "Pads/Tampons", false),
         new Item(5, "Razors", false),
         new Item(1, "Shampoo", false),
         new Item(6, "Toothbrush", false),
-        new Item(7, "Toothpaste", false)
+        new Item(7, "Toothpaste", false),
+        new Item(8, "Towel", false)
     ]
 
     var hairFaceCare = [
