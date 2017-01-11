@@ -41,11 +41,12 @@
 }
 .category-name {
     color: #990000;
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: bold;
     text-align: center;
     padding-bottom: 10px;
     border-bottom: 1px solid #990000;
-    font-family: 'Niconne', sans-serif;
+    font-family: cursive, sans-serif;
 }
 .pad-l-10 {
     padding-left: 10px;
