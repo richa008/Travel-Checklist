@@ -6,7 +6,7 @@ Travel Checklist is an app with basic items you may need on your trip, divided i
 - Add or remove items as necessary.
 - All the changes to the list are stored in local storage.
 
-###Installation
+### Installation
 
 Update node<br>
 npm update -g npm
@@ -20,11 +20,9 @@ grunt
 Run server<br> 
 http-server
 
-###Web App<br>
+### Web App<br>
 https://travelchecklist-b736d.firebaseapp.com/
 
-###Chrome App<br>
-https://chrome.google.com/webstore/detail/travel-checklist/dlaemeigopgiecmageknplocogeedkjh
 
 
 
